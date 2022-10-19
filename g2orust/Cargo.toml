@@ -1,0 +1,28 @@
+[package]
+name = "g2orust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "g2orust"
+path = "src/lib.rs"
+
+[dependencies]
+cxx = "1.0"
+nalgebra = {version = "*", features = ["serde-serialize"]}
+
+[build-dependencies]
+cxx-build = "1.0"
+cmake = "0.1.48"
+
+#[target.x86_64-unknown-linux-gnu.g2o]
+#rustc-link-lib = ["g2o"]
+#rustc-link-search = ["../g2o/g2o/lib"]
+#rustc-flags = "-L /some/path"
+#rustc-cfg = ['key="value"']
+#rustc-env = {key = "value"}
+#rustc-cdylib-link-arg = ["…"]
+#metadata_key1 = "value"
+#metadata_key2 = "value"
