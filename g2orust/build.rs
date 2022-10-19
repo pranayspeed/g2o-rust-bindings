@@ -8,7 +8,7 @@ fn main() {
     let _manifest_dir = concat!("-I",concat!(env!("CARGO_MANIFEST_DIR"),"/g2o/g2o/rust/"));
 
     let _dst = Config::new("g2o")
-                        //.cxxflag(manifest_dir)
+                        .cxxflag(manifest_dir)
                         .build_target("g2o")
                         .build();
 
